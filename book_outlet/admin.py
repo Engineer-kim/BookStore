@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from .models import Book
+from .models import Book, Author, Address, Country
+
 
 # Register your models here.
 
@@ -11,3 +12,6 @@ class BookAdmin(admin.ModelAdmin):
     list_display = ("title", "author") # 데이터에 대한 속성 이름 표시
 
 admin.site.register(Book , BookAdmin)
+admin.site.register(Author)
+admin.site.register(Address)
+admin.site.register(Country)
